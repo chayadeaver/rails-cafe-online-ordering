@@ -3,4 +3,13 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+    has_many :orders
+    has_one :cart
+    has_many :items, through: :orders
+    has_many :items, through: :cart
+
+    def current_items
+      self.cart.items
+    end
 end
