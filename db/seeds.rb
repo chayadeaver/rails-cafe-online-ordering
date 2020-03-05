@@ -67,9 +67,9 @@ Item.create(name: "Barnyard Burger", price: 8.50, menu_id: [2, 3], category_id: 
 Item.create(name: "Mushroom Swiss Burger", price: 8.50, menu_id: [2, 3], category_id: [4])
 
 # Extras
-Item.create(name: "Cream Cheese", price: .75, menu_id: [1], category_id: [2, 5])
-Item.create(name: "Hummus", price: .75, menu_id: [1], category_id: [2, 5])
-Item.create(name: "Peanut Butter", price: .75, menu_id: [1], category_id: [2, 5])
+Item.create(name: "Cream Cheese", price: 0.75, menu_id: [1], category_id: [2, 5])
+Item.create(name: "Hummus", price: 0.75, menu_id: [1], category_id: [2, 5])
+Item.create(name: "Peanut Butter", price: 0.75, menu_id: [1], category_id: [2, 5])
 Item.create(name: "Chips", price: 2.50, menu_id: [2, 3], category_id: [4, 5])
 Item.create(name: "Fries", price: 2.50, menu_id: [2, 3], category_id: [4, 5])
 Item.create(name: "Onion Rings", price: 2.50, menu_id: [2, 3], category_id: [4, 5])
