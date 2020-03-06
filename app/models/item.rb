@@ -7,4 +7,9 @@ class Item < ApplicationRecord
 
     # validates :menu_id, presence: true, blank: false, nil: false
     # validates :category_id, presence: true, blank: false, nil: false
+
+    # def self.muffins
+    #     where()
+    # end
+    
 end
