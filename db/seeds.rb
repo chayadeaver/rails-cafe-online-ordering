@@ -21,19 +21,19 @@ Category.create(name: "Extras") # id: 5
 Category.create(name: "Desserts") # id: 6
 
 # Drinks
-Item.create(name: "Hot Coffee - 8oz", price: 1.25, menu_id: 1, category_id: 1)
-Item.create(name: "Hot Coffee - 12oz", price: 1.50, menu_id: 1, category_id: 1)
-Item.create(name: "Iced Coffee - 16oz", price: 2.00, menu_id: 1, category_id: 1)
-Item.create(name: "Iced Coffee - 20oz", price: 2.50, menu_id: 1, category_id: 1)
-Item.create(name: "Cold Brew - 16oz", price: 2.25, menu_id: 1, category_id: 1)
-Item.create(name: "Cold Brew - 20oz", price: 2.50, menu_id: 2, category_id: 1)
-Item.create(name: "Hot Black Tea - 8oz", price: 1.25, menu_id: 1, category_id: 1)
-Item.create(name: "Hot Black Tea - 12oz", price: 1.50, menu_id: 1, category_id: 1)
-Item.create(name: "Iced Unsweetened Black Tea - 16oz", price: 2.00, menu_id: 2, category_id: 1)
-Item.create(name: "Iced Unsweetened Black Tea - 20oz", price: 2.25, menu_id: 3, category_id: 1)
-Item.create(name: "Iced Sweetened Black Tea - 16oz", price: 2.00, menu_id: 2, category_id: 1)
-Item.create(name: "Iced Sweetened Black Tea - 20oz", price: 2.25, menu_id: 3, category_id: 1)
-Item.create(name: "Soda - 20oz", price: 2.00, menu_id: 3, category_id: 1)
+Item.create(name: "Hot Coffee(8oz)", price: 1.25, menu_id: 1, category_id: 1)
+Item.create(name: "Hot Coffee(12oz)", price: 1.50, menu_id: 1, category_id: 1)
+Item.create(name: "Iced Coffee(16oz)", price: 2.00, menu_id: 1, category_id: 1)
+Item.create(name: "Iced Coffee(20oz)", price: 2.50, menu_id: 1, category_id: 1)
+Item.create(name: "Cold Brew(16oz)", price: 2.25, menu_id: 1, category_id: 1)
+Item.create(name: "Cold Brew(20oz)", price: 2.50, menu_id: 2, category_id: 1)
+Item.create(name: "Hot Black Tea(8oz)", price: 1.25, menu_id: 1, category_id: 1)
+Item.create(name: "Hot Black Tea(12oz)", price: 1.50, menu_id: 1, category_id: 1)
+Item.create(name: "Iced Unsweetened Black Tea(16oz)", price: 2.00, menu_id: 2, category_id: 1)
+Item.create(name: "Iced Unsweetened Black Tea(20oz)", price: 2.25, menu_id: 3, category_id: 1)
+Item.create(name: "Iced Sweetened Black Tea(16oz)", price: 2.00, menu_id: 2, category_id: 1)
+Item.create(name: "Iced Sweetened Black Tea(20oz)", price: 2.25, menu_id: 3, category_id: 1)
+Item.create(name: "Soda(20oz)", price: 2.00, menu_id: 3, category_id: 1)
 
 # Bakery
 Item.create(name: "Butter Croissant", price: 2.00, menu_id: 1, category_id: 2)
