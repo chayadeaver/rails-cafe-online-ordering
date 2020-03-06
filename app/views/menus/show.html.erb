@@ -1,0 +1,5 @@
+<h2><%= @menu.course %></h2>
+
+<% @menu.items.each do |item| %>
+    <p><%= item.name %> - $<%= item.price %></p>
+<% end %>      
