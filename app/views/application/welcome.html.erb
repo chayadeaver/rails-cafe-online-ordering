@@ -1,4 +1,12 @@
 <h1>Welcome to Chaya's Cafe!</h1>
 
-<p><%= link_to "View Menu", menus_path %></p>
-<p><%= link_to "View Categories", categories_path %></p>
+<% if user_signed_in? %>
+    <% if current_user.admin %>
+    <p><%= link_to "Add New Menu", new_menu_path %></p>
+    <p><%= link_to "Add New Category", new_category_path %></p>
+    <p><%= link_to "Menu List", menus_path %>
+    <p><%= link_to "Category List", categories_path %>
+    <% end %>
+<% end %>
+
+<p><%= link_to "View Menu", items_path %>
