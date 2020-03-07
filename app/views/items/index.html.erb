@@ -1,0 +1,18 @@
+<h2>Menu</h2>
+
+<h3>Filter Items by Menu and Category</h3>
+<div class="filter">
+<%= form_tag("/items", method: "get") do %>
+    <label>Menu</label>
+    <%= select_tag "menu", options_from_collection_for_select(@menus, :id, :name), include_blank: true %>
+    <label>Category</label>
+    <%= select_tag "category", options_from_collection_for_select(@categories, :id, :name), include_blank: true %>
+    <%= submit_tag "Filter"%>
+<% end %>
+</div>
+
+<% @items.each do |item| %>
+    <div>
+        <p><%= item.name %> - $<%= item.price %></p>
+    </div>
+<% end %>

@@ -1,5 +1,11 @@
-<h2><%= @menu.course %></h2>
+<h2><%= @menu.name %></h2>
 
 <% @menu.items.each do |item| %>
     <p><%= item.name %> - $<%= item.price %></p>
-<% end %>      
+<% end %>
+
+<% if current_user.admin %>
+        <%= button_to "Edit Menu", edit_menu_path(@menu), method: :get %>
+        <br>
+        <%= button_to "Delete Menu", menu_path(@menu), method: :delete %>
+<% end %>
