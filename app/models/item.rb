@@ -8,8 +8,12 @@ class Item < ApplicationRecord
     # validates :menu_id, presence: true, blank: false, nil: false
     # validates :category_id, presence: true, blank: false, nil: false
 
-    # def self.muffins
-    #     where()
-    # end
+    def self.by_menu(menu_id)
+        where(menu: menu_id)
+    end
+
+    def self.by_category(category_id)
+        where(category: category_id)
+    end
     
 end
