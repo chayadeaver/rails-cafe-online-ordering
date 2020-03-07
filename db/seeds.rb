@@ -9,9 +9,9 @@ Menu.destroy_all
 Category.destroy_all
 Item.destroy_all
 
-Menu.create(course: "Breakfast") # id: 1
-Menu.create(course: "Lunch") # id: 2
-Menu.create(course: "Dinner") # id: 3
+Menu.create(name: "Breakfast") # id: 1
+Menu.create(name: "Lunch") # id: 2
+Menu.create(name: "Dinner") # id: 3
 
 Category.create(name: "Drinks") # id: 1
 Category.create(name: "Bakery") # id: 2

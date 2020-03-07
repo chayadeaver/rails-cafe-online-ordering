@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_03_04_202632) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.float "price"
+    t.decimal "price"
     t.integer "menu_id"
     t.integer "category_id"
     t.integer "cart_id"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_03_04_202632) do
   end
 
   create_table "menus", force: :cascade do |t|
-    t.string "course"
+    t.string "name"
   end
 
   create_table "orders", force: :cascade do |t|
