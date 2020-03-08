@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :categories
-  resources :menus
+  resources :categories do
+    resources :items
+  end
+  resources :menus do 
+    resources :items
+  end
   resources :items
   resources :orders
   resources :carts

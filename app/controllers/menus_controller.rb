@@ -1,6 +1,7 @@
 class MenusController < ApplicationController
     before_action :find_menu, only: [:show, :edit, :update]
     before_action :admin_only
+
     def index
         @menus = Menu.all
     end
@@ -10,8 +11,8 @@ class MenusController < ApplicationController
     end
 
     def create
-        @menu = Menu.create(menu_params)
-        if @menu
+        @menu = Menu.new(menu_params)
+        if @menu.save
             redirect_to menu_path(@menu)
         else
             render :new
