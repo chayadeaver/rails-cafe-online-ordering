@@ -4,8 +4,3 @@
     <p><%= item.name %> - $<%= item.price %></p>
 <% end %>
 
-<% if current_user.admin %>
-        <%= button_to "Edit Category", edit_category_path(@category), method: :get %>
-        <br>
-        <%= button_to "Delete Category", category_path(@category), method: :delete %>
-<% end %>
