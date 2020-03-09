@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   resources :categories do
     resources :items
     get '/admin_categories', to: 'items#admin_categories'
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :carts
   root to: 'application#welcome'
+  get '/users/:id', to: 'users#show'
   devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: 'callbacks'}
   devise_scope :user do
     get '/login', to: 'devise/sessions#new'
