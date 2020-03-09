@@ -1,0 +1,9 @@
+<h3>Menu: <%= @item.menu.name %></h3>
+<h3>Category: <%= @item.category.name %></h3>
+<h4>Item Name: <%= @item.name %></h4>
+<h4>Price: $<%= @item.price %></h4>
+
+
+<p><%= link_to "Add Another Item", new_item_path %></p>
+<p><%= link_to "Edit Item", edit_item_path(@item) %></p>
+<p><%= link_to "Delete Item", item_path(@item), method: :delete %></p>
