@@ -1,7 +1,7 @@
 <h2><%= @menu.name %></h2>
 
 <% @menu.items.each do |item| %>
-    <p><%= item.name %> - $<%= item.price %></p>
+    <p><%= link_to item.name, item_path(item) %> - $<%= item.price %></p>
 <% end %>
 
 <p><%= link_to "Add Items to Menu", new_menu_item_path(@menu) %></p>
