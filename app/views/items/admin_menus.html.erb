@@ -1,0 +1,10 @@
+<h2><%= items.menu.name %></h2>
+
+<% @items.each do |item| %>
+    <p><%= item.name %> - $<%= item.price %></p>
+<% end %>
+
+<% if current_user.admin %>
+    <p><%= link_to "Edit Menu Name", edit_menu_path(items.menu_id), method: :get %></p>
+    <p><%= link_to "Delete Menu Name", menu_path(items.menu_id), method: :delete %></p>
+<% end %>
