@@ -1,11 +1,11 @@
 <h2><%= items.category.name %></h2>
 
 <% @items.each do |item| %>
-    <p><%= item.name %> - $<%= item.price %></p>
+    <p><%= link_to item.name, item_path(item) %> - $<%= item.price %></p>
 <% end %>
 
 <% if current_user.admin %>
+    <p><%= link_to "Add Another Item", new_item_path %></p>
     <p><%= link_to "Edit Category Name", edit_category_path(items.category_id), method: :get %></p>
     <p><%= link_to "Delete Category Name", category_path(items.category_id), method: :delete %></p>
-    
 <% end %>
