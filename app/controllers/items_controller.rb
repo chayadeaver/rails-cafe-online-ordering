@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
-    before_action :validate_user, except: [:index]
+    before_action :authenticate_user!, except: [:index]
+    before_action :find_item
     def index
         @menus = Menu.all 
         @categories = Category.all
@@ -29,7 +30,37 @@ class ItemsController < ApplicationController
         @item = Item.new
     end
 
+    def create
+        @item = Item.create(item_params)
+        if @item
+            redirect_to item_path(@item)
+        else
+            render :new
+        end
+    end
+
+    def edit
+    end
+
+    def update
+        @item.update(item_params)
+        if @item.save
+            redirect_to item_path(@item)
+        else
+            render :edit
+        end
+    end
+
+    def destroy
+        Item.find_by(id: params[:id]).destroy
+        redirect_to items_path
+    end
+
 private
+
+    def find_item
+        @item = Item.find_by(id: params[:id])
+    end
 
     def item_params
         params.require(:item).permit(:name, :price, :menu_id, :category_id, :cart_id, :order_id)
