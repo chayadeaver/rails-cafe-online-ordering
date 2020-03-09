@@ -4,8 +4,4 @@
     <p><%= item.name %> - $<%= item.price %></p>
 <% end %>
 
-<% if current_user.admin %>
-        <%= button_to "Edit Menu", edit_menu_path(@menu), method: :get %>
-        <br>
-        <%= button_to "Delete Menu", menu_path(@menu), method: :delete %>
-<% end %>
+<p><%= link_to "Add Items to Menu", new_menu_item_path(@menu) %></p>
