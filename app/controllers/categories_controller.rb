@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
     before_action :find_category, only: [:show, :edit, :update]
+    before_action :authenticate_user!
     before_action :admin_only
     def index
         @categories = Category.all

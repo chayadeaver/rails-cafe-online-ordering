@@ -1,5 +1,6 @@
 class MenusController < ApplicationController
     before_action :find_menu, only: [:show, :edit, :update]
+    before_action :authenticate_user!
     before_action :admin_only
 
     def index

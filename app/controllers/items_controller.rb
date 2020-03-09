@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
     before_action :authenticate_user!, except: [:index]
+    before_action :admin_only, only: [:admin_categories, :admin_menus]
     before_action :find_item
     def index
         @menus = Menu.all 
