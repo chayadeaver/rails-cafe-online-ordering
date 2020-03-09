@@ -2,7 +2,8 @@
 
 <ul>
     <% @menus.each do |menu| %>
-        <li><%= link_to menu.name, menu_path(menu) %></li>
+        <li><%= link_to menu.name, menu_admin_menus_path(menu) %></li>
     <% end %>
 </ul>
+
 <p><%= link_to "Add New Menu", new_menu_path %></p>
