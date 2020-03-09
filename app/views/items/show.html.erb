@@ -2,6 +2,7 @@
 <h3>Category: <%= @item.category.name %></h3>
 <h4>Item Name: <%= @item.name %></h4>
 <h4>Price: $<%= @item.price %></h4>
+<p><%= @item.description %></p>
 
 
 <p><%= link_to "Add Another Item", new_item_path %></p>
