@@ -1,4 +1,6 @@
-<h3>Menu: <%= @item.menu.name %></h3>
+<header class="break">
+<h2>Menu: <%= @item.menu.name %></h2>
+</header>
 <h3>Category: <%= @item.category.name %></h3>
 <h4>Item Name: <%= @item.name %></h4>
 <h4>Price: $<%= @item.price %></h4>
@@ -8,8 +10,10 @@
 <% if user_signed_in?%>
     <%= button_to "Add to Cart", line_items_path(:item_id => @item.id) %>
     <% if current_user.admin %>
+        <h5>----- Admin -----</h5>
         <p><%= link_to "Add Another Item", new_item_path %></p>
         <p><%= link_to "Edit Item", edit_item_path(@item) %></p>
         <p><%= link_to "Delete Item", item_path(@item), method: :delete %></p>
+        <h5>----- Only ------</h5>
     <% end %>
 <% end %>

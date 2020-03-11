@@ -1,3 +1,6 @@
+<header class="break">
+<h2><%= @order.created_at %></h2>
+</header>
 <% @order.items.each do |item| %>
     <p><%= item.name %></p>
     <p><%= item.description %>

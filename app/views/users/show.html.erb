@@ -1,8 +1,11 @@
+<header class="break">
 <h2>Welcome, <%= current_user.name %></h2>
+</header>
 
-<ul>
+
+<h4>My Orders</h4>
+
 <% current_user.orders. each do |order| %>
-    <li><%= link_to order.created_at, order_path(order) %></li>
+    <p><%= link_to order.created_at, order_path(order) %></p>
 
 <% end %>
-</ul>
