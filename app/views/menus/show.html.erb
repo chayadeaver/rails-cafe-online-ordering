@@ -4,9 +4,7 @@
 
 
 <% @menu.items.each do |item| %>
-    <p><%= link_to item.name, item_path(item) %></p>
+    <p><%= link_to item.name, menu_item_path(item) %></p>
 <% end %>
 
-<p><%= button_to "Add Items to Menu", new_menu_item_path(@menu), method: :get %></p>
-<p><%= button_to "Edit Menu Name", edit_menu_path(@menu), method: :get %></p>
-<p><%= button_to "Delete Menu Name", menu_path(@menu), method: :delete %></p>
+<%= render partial: 'links', locals: {menu: @menu} %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'application#welcome'
   get 'carts/:id' => "carts#show", as: "cart"
   delete 'carts/:id' => "carts#destroy"
 
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   end
   resources :items
   resources :orders
-  root to: 'application#welcome'
+  
   get 'users/show'
   get '/users/:id', to: 'users#show'
   devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: 'callbacks'}

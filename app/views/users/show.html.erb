@@ -7,5 +7,4 @@
 
 <% current_user.orders. each do |order| %>
     <p><%= link_to created_at(order), order_path(order) %></p>
-
 <% end %>

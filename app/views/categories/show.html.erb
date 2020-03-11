@@ -4,9 +4,7 @@
 
 
 <% @category.items.each do |item| %>
-    <p><%= link_to item.name, item_path(item) %></p>
+    <p><%= link_to item.name, category_item_path(item) %></p>
 <% end %>
 
-<p><%= button_to "Add Items to Menu", new_menu_item_path(@category), method: :get %></p>
-<p><%= button_to "Edit Category Name", edit_category_path(@category), method: :get %></p>
-<p><%= button_to "Delete Category Name", category_path(@category), method: :delete %></p>
+<%= render partial: 'links', locals: {category: @category%>
