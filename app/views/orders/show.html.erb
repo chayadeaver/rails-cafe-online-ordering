@@ -1,8 +1,8 @@
 <header class="break">
-<h2><%= @order.created_at %></h2>
+<h2>Order created on <%= created_at(@order) %></h2>
 </header>
 <% @order.items.each do |item| %>
     <p><%= item.name %></p>
-    <p><%= item.description %>
+    <p><%= item.description %></p>
 
 <% end %>
