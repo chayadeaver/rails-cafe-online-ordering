@@ -2,5 +2,16 @@
 <h2>Add a New Category Name</h2>
 </header>
 
+<% if @category.errors.any? %>
+<div id="error_explanation">
+<%= pluralize(@category.errors.count, "error") %> 
+<ul>
+    <% @category.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+</ul>
+</div>
+<% end %>
+
 
 <%= render partial: 'menus/form', locals: {menu: @category} %>
