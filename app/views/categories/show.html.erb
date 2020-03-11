@@ -8,3 +8,5 @@
 <% end %>
 
 <p><%= link_to "Add Items to Menu", new_menu_item_path(@category) %></p>
+<p><%= link_to "Edit Category Name", edit_category_path(@category), method: :get %></p>
+<p><%= link_to "Delete Category Name", category_path(@category), method: :delete %></p>
