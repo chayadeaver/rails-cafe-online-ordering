@@ -3,6 +3,7 @@ class Item < ApplicationRecord
     belongs_to :menu, optional: true
     belongs_to :order, optional: true
     belongs_to :cart, optional: true
+    has_many :line_items, dependent: :destroy
     validates :name, presence: true
     validates :price, presence: true
 

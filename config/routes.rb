@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  get 'users/show'
+  get 'carts/:id' => "carts#show", as: "cart"
+  delete 'carts/:id' => "carts#destroy"
+
+  post 'line_items/:id/add' => "line_items#add_quantity", as: "line_item_add"
+  post 'line_items/:id/reduce' => "line_items#reduce_quantity", as: "line_item_reduce"
+  post 'line_items' => "line_items#create"
+  get 'line_items/:id' => "line_items#show", as: "line_item"
+  delete 'line_items/:id' => "line_items#destroy"
+
   resources :categories do
     resources :items
     get '/admin_categories', to: 'items#admin_categories'
@@ -10,8 +18,8 @@ Rails.application.routes.draw do
   end
   resources :items
   resources :orders
-  resources :carts
   root to: 'application#welcome'
+  get 'users/show'
   get '/users/:id', to: 'users#show'
   devise_for :users, :controllers => {registrations: 'registrations', omniauth_callbacks: 'callbacks'}
   devise_scope :user do

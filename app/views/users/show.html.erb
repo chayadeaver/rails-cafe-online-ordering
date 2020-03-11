@@ -1,2 +1,8 @@
 <h2>Welcome, <%= current_user.name %></h2>
 
+<ul>
+<% current_user.orders. each do |order| %>
+    <li><%= link_to order.created_at, order_path(order) %></li>
+
+<% end %>
+</ul>

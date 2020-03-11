@@ -4,7 +4,9 @@
 <h4>Price: $<%= @item.price %></h4>
 <p><%= @item.description %></p>
 
+
 <% if user_signed_in?%>
+    <%= button_to "Add to Cart", line_items_path(:item_id => @item.id) %>
     <% if current_user.admin %>
         <p><%= link_to "Add Another Item", new_item_path %></p>
         <p><%= link_to "Edit Item", edit_item_path(@item) %></p>
