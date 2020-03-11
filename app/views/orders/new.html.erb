@@ -1,6 +1,18 @@
 <header class="break">
 <h2>New Order</h2>
 </header>
+
+<% if @order.errors.any? %>
+<div id="error_explanation">
+<%= pluralize(@order.errors.count, "error") %> 
+<ul>
+    <% @order.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+</ul>
+</div>
+<% end %>
+
 <%= form_for(@order) do |f| %>
     <p>
         <%= f.label :name %><br>
