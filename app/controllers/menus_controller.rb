@@ -12,10 +12,10 @@ class MenusController < ApplicationController
     end
 
     def create
-        @menu = Menu.create(menu_params)
-        if @menu
-            redirect_to menu_path(@menu)
-        else
+        @menu = Menu.new(menu_params)
+        if @menu.save
+            redirect_to menu_path(@menu), notice: "You have successfully created a menu!"
+        else 
             render :new
         end
     end
@@ -29,7 +29,7 @@ class MenusController < ApplicationController
     def update
         @menu.update(menu_params)
         if @menu.save
-            redirect_to menu_path(@menu)
+            redirect_to menu_path(@menu), notice: "You have successfully updated a menu!"
         else
             render :edit
         end
@@ -37,7 +37,7 @@ class MenusController < ApplicationController
 
     def destroy
         Menu.find_by(id: params[:id]).destroy
-        redirect_to menus_path
+        redirect_to menus_path, notice: "You have successfully deleted a menu."
     end
 
 private

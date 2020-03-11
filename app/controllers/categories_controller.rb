@@ -11,8 +11,8 @@ class CategoriesController < ApplicationController
     end
 
     def create
-        @category = Category.create(category_params)
-        if @category
+        @category = Category.new(category_params)
+        if @category.save
             redirect_to category_path(@category)
         else
             render :new
