@@ -7,6 +7,6 @@
     <p><%= link_to item.name, item_path(item) %></p>
 <% end %>
 
-<p><%= link_to "Add Items to Menu", new_menu_item_path(@menu) %></p>
-<p><%= link_to "Edit Menu Name", edit_menu_path(@menu), method: :get %></p>
-<p><%= link_to "Delete Menu Name", menu_path(@menu), method: :delete %></p>
+<p><%= button_to "Add Items to Menu", new_menu_item_path(@menu), method: :get %></p>
+<p><%= button_to "Edit Menu Name", edit_menu_path(@menu), method: :get %></p>
+<p><%= button_to "Delete Menu Name", menu_path(@menu), method: :delete %></p>
