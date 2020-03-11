@@ -5,10 +5,13 @@
 <% if user_signed_in? %>
     <% if current_user.admin %>
     <h5>--- Admin ---</h5>
-    <p><%= link_to "Menu List", menus_path %>
-    <p><%= link_to "Category List", categories_path %>
+    <p><%= button_to "Menu List", menus_path, method: :get %>
+    <p><%= button_to "Category List", categories_path, method: :get %>
     <h5>---- Only ----</h5>
     <% end %>
 <% end %>
 
-<p><%= link_to "View Menu", items_path %>
+<%= image_tag("woman-beside-bottles-and-cupboard-1089570.jpg") %>
+
+
+<p><%= button_to "View Menu", items_path, method: :get %>
