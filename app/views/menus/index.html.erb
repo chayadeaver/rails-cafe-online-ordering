@@ -5,7 +5,7 @@
 
 
 <% @menus.each do |menu| %>
-    <p><%= link_to menu.name, menu_admin_menus_path(menu) %></p>
+    <p><%= link_to menu.name, menu_path(menu) %></p>
 <% end %>
 
 
