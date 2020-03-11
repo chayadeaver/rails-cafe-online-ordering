@@ -15,7 +15,7 @@
  */
 
 /* The navigation bar */
-ul {
+#fixedbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -50,7 +50,7 @@ ul {
     box-shadow: 0 0 10px rgba(0,0,0,.3);
     margin: 16px auto;
     max-width: 960px;
-    padding: 2.25%; /* 18px / 800px */
+    padding: 2.5%; /* 18px / 800px */
     width: 85%;
 }
 
@@ -71,4 +71,26 @@ body {
     color: #333;
     font-family: Helvetica;
     line-height: 18px;
+}
+
+#error_explanation {
+    border: 2px solid rgb(124, 4, 4);
+    border-radius: 10px;
+    background-color: rgb(245, 186, 186);
+    padding: 10px;
+    margin: 10px;
+}
+
+#error_explanation li {
+    list-style-type: none;
+}
+
+#notice {
+    border: 2px solid rgb(21, 83, 2);
+    border-radius: 10px;
+    background-color: rgb(133, 202, 133);
+    padding: 10px;
+    margin: 10px; 
+    position: relative;
+    top: 47px;
 }
