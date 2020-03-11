@@ -2,16 +2,7 @@
 <h2>Add a New Menu Name</h2>
 </header>
 
-<% if @menu.errors.any? %>
-<div id="error_explanation">
-<%= pluralize(@menu.errors.count, "error") %> 
-<ul>
-    <% @menu.errors.full_messages.each do |msg| %>
-	<li><%= msg %></li>
-	<% end %>
-</ul>
-</div>
-<% end %>
+<%= render partial: 'categories/errors', locals: {category: @menu} %>
 
 
 <%= render partial: 'form', locals: {menu: @menu} %>

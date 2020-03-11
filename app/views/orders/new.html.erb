@@ -2,31 +2,6 @@
 <h2>New Order</h2>
 </header>
 
-<% if @order.errors.any? %>
-<div id="error_explanation">
-<%= pluralize(@order.errors.count, "error") %> 
-<ul>
-    <% @order.errors.full_messages.each do |msg| %>
-	<li><%= msg %></li>
-	<% end %>
-</ul>
-</div>
-<% end %>
+<%= render partial: 'categories/errors', locals: {category: @order} %>
 
-<%= form_for(@order) do |f| %>
-    <p>
-        <%= f.label :name %><br>
-        <%= f.text_field :name, required: true, autofocus: true %>
-    </p>
-    <p>
-        <%= f.label :email %><br>
-        <%= f.email_field :email %>
-    </p>
-    <p>
-        <%= f.label :address %><br>
-        <%= f.text_area :address %>
-    </p>
-    <p>
-        <%= f.submit %>
-    </p>
-<% end %>
+<%= render partial: 'form', locals: {order: @order} %>
