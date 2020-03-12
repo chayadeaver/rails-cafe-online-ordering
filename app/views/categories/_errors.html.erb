@@ -1,8 +1,8 @@
-<% if category.errors.any? %>
-<div id="error_explanation">
-<%= pluralize(category.errors.count, "error") %> 
+<% if resource.errors.any? %>
+<div class="error_explanation">
+<%= pluralize(resource.errors.count, "error") %> 
 <ul>
-    <% category.errors.full_messages.each do |msg| %>
+    <% resource.errors.full_messages.each do |msg| %>
 	<li><%= msg %></li>
 	<% end %>
 </ul>

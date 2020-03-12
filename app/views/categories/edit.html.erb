@@ -2,4 +2,6 @@
 <h2>Edit a Category</h2>
 </header>
 
-<%= render partial: 'menus/form', locals: {menu: @category} %>
+<%= render partial: 'errors', locals: {resource: @category} %>
+
+<%= render partial: 'menus/form', locals: {resource: @category} %>
