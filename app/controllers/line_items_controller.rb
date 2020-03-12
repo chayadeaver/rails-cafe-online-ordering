@@ -1,5 +1,6 @@
 class LineItemsController < ApplicationController
     before_action :authenticate_user!
+    before_action :set_line_items
     def create
         # Find associated item and current cart
         chosen_item = Item.find(params[:item_id])
@@ -23,14 +24,12 @@ class LineItemsController < ApplicationController
     end
 
     def add_quantity
-        @line_item = LineItem.find(params[:id])
         @line_item.quantity += 1
         @line_item.save
         redirect_to cart_path(@current_cart)
     end
     
     def reduce_quantity
-        @line_item = LineItem.find(params[:id])
         if @line_item.quantity > 1
             @line_item.quantity -= 1
         end
@@ -39,12 +38,16 @@ class LineItemsController < ApplicationController
     end
 
     def destroy
-        @line_item = LineItem.find_by(id: params[:id])
         @line_item.destroy
         redirect_to cart_path(@current_cart)
     end
     
     private
+
+        def set_line_items
+            @line_item = LineItem.find_by(id: params[:id])
+        end
+
         def line_item_params
             params.require(:line_item).permit(:quantity,:item_id, :cart_id)
         end

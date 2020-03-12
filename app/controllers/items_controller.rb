@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
     def create
         @item = Item.new(item_params)
         if @item.save
-            redirect_to item_path(@item)
+            redirect_to item_path(@item), notice: "You've successfully created a new item!"
         else
             render :new
         end
@@ -34,14 +34,14 @@ class ItemsController < ApplicationController
     def update
         @item.update(item_params)
         if @item.save
-            redirect_to item_path(@item)
+            redirect_to item_path(@item), notice: "You've successfully updated an item!"
         else
             render :edit
         end
     end
 
     def destroy
-        Item.find_by(id: params[:id]).destroy
+        Item.find_by(id: params[:id]).destroy, notice: "You've successfully deleted an item!"
         redirect_to items_path
     end
 
