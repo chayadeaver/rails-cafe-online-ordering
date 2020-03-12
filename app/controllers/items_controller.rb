@@ -41,8 +41,8 @@ class ItemsController < ApplicationController
     end
 
     def destroy
-        Item.find_by(id: params[:id]).destroy, notice: "You've successfully deleted an item!"
-        redirect_to items_path
+        Item.find_by(id: params[:id]).destroy
+        redirect_to items_path, notice: "You've successfully deleted an item!"
     end
 
 private
