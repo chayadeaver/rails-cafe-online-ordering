@@ -21,13 +21,12 @@
     padding: 0;
     overflow: hidden;
     background-color: #07183B;
+    max-width: 100%;
     position: fixed;
-    width: 83%;
 }
 
 #nav {
     float: left;
-    
 }
 
 #nav a {
