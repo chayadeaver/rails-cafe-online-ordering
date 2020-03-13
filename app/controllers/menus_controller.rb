@@ -36,7 +36,7 @@ class MenusController < ApplicationController
     end
 
     def destroy
-        Menu.find_by(id: params[:id]).destroy
+        @menu.destroy
         redirect_to menus_path, notice: "You have successfully deleted a menu."
     end
 

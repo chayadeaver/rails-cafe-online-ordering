@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-    before_action :find_category, only: [:show, :edit, :update]
+    before_action :find_category, except: [:index]
     before_action :authenticate_user!
     before_action :admin_only
     def index
@@ -35,7 +35,7 @@ class CategoriesController < ApplicationController
     end
 
     def destroy
-        Category.find_by(id: params[:id]).destroy
+        @category.destroy
         redirect_to categories_path, notice: "You've successfully deleted a category."
     end
 
