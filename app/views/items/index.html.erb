@@ -1,7 +1,14 @@
 <header class="break">
 <h2>Menu</h2>
 </header>
-
+<% if user_signed_in? %>
+    <% if current_user.admin %>
+        <h5>----- Admin -----</h5>
+        <p><%= button_to "Go Back Menu List", menus_path, method: :get %></p>
+        <p><%= button_to "Go Back Category List", categories_path, method: :get %></p>
+        <h5>------ Only ------</h5>
+    <% end %>
+<% end %>
 
 <h3>Filter Items by Menu and Category</h3>
 <div class="filter">
