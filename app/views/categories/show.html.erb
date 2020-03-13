@@ -4,7 +4,7 @@
 
 
 <% @category.items.each do |item| %>
-    <p><%= link_to item.name, category_item_path(item) %></p>
+    <p><%= link_to item.name, category_item_path(@category, item) %></p>
 <% end %>
 
 <%= render partial: 'links', locals: {category: @category} %> 
