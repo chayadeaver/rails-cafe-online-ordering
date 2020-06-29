@@ -19,6 +19,7 @@ A Rails cafe menu application that allows for online ordering and database manag
 ## Tech Used
 
 * Ruby [2.6.1]
+* Rails [6.02] - MVC Web Framework
 * Devise[4.2] - gem for authentication and authorization
 * Postgres - database
 * Omniauth-github - gem for omniauth with GitHub
