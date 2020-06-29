@@ -1,8 +1,9 @@
-# README
+# Chaya's Cafe
+A Rails cafe menu application that allows for online ordering and database management.
 
-Welcome to Chaya's Cafe! This is a restaurant website that allows a customer to create an order by adding items to a cart. There are many items to choose from and anyone can view the menu but to create an order, you must be signed in. 
+ (https://imgur.com/ZlmDORf)
 
-Website on Heroku: [rails-cafe-online-ordering](https://rails-cafe-online-ordering.herokuapp.com/)
+[Demo](https://www.loom.com/share/66ef19f38983478880cd956d34fb10fd)|[Deployed App](https://rails-cafe-online-ordering.herokuapp.com/)
 
 To test this repo:
 
