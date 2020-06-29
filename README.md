@@ -26,10 +26,10 @@ A Rails cafe menu application that allows for online ordering and database manag
 
 ## To Install
 
-1. Clone this repo to local machine `git clone <this-repo>`
-2. Cd into directory and run `bundle install` to install dependencies
-3. Make sure Postgres app is running. To install Postgres app, go [here](https://www.postgresql.org/download/)
-4. Run `rails db:create` to create a database
-5. Run `rails db:migrate` to create tables in database
-6. Run `rails db:seed` to generate seed data
-7. Run `rails s` to run server
+* Clone this repo to local machine `git clone <this-repo>`
+* Cd into directory and run `bundle install` to install dependencies
+* Make sure Postgres app is running. To install Postgres app, go [here](https://www.postgresql.org/download/)
+* Run `rails db:create` to create a database
+* Run `rails db:migrate` to create tables in database
+* Run `rails db:seed` to generate seed data
+* Run `rails s` to run server
