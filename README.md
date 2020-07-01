@@ -4,7 +4,7 @@ A Rails cafe menu application that allows for online ordering and database manag
  ![rails-project](app/assets/images/rails-project.gif)
 
 
-[Demo](https://www.loom.com/share/12e768c5b8804fbea523763f1f02a00f)|[Deployed App](https://rails-cafe-online-ordering.herokuapp.com/)
+[Demo](https://www.loom.com/share/991fd0349e054adfb6d727f9e70513b2)|[Deployed App](https://rails-cafe-online-ordering.herokuapp.com/)
 
 ## Features
 
